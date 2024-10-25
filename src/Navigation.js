@@ -11,7 +11,7 @@ import navStyles from './Navigation.module.css'; // CSS for Navigation
 import JHSLogo from './image-sso-yellow.png';
 import axios from 'axios';
 import NotificationModal from './NotificationModal'; // Import NotificationModal
-import MenuPopupState from './Components/MenuPopupState'; 
+import MenuPopupState from './components/MenuPopupState'; 
 import IconButton from '@mui/material/IconButton';
 
 const Navigation = ({ loggedInUser }) => {
