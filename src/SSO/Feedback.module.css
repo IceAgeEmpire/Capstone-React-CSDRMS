@@ -1,0 +1,140 @@
+/* General styles */
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    background: #f7f9fc; /* Light background for a clean look */
+    min-height: 100vh; /* Ensure it covers the full viewport height */
+    font-family: 'Arial', sans-serif; /* Modern, clean font */
+}
+
+/* Content styles */
+.contentContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.feedbackContent {
+    background: linear-gradient(180deg, #863537, #200d0d);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: justify;
+    color: #fff;
+    width: 80%; /* Adjust width as needed */
+    max-width: 800px;
+    margin: auto;
+    animation: slideIn 1s ease-in-out;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #fff; /* White text color */
+    font-family: 'Arial', sans-serif; /* Modern font */
+}
+
+.error {
+    color: red; /* Error message color */
+}
+
+.feedbackList {
+    margin-top: 20px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.feedbackItem {
+    background: #fff; /* White background for feedback items */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    color: #333; /* Dark text color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.feedbackItem p {
+    margin: 5px 0;
+}
+
+.feedbackItem .feedbackHeader {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.feedbackItem .feedbackDetails {
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.feedbackItem .feedbackActions {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.acknowledgeButton {
+    background-color: #FFD700; /* Gold background for buttons */
+    color: #8B0000; /* Dark red text for buttons */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    font-size: 16px; /* Larger text for better readability */
+    margin-top: 10px;
+}
+
+.acknowledgeButton:hover {
+    background-color: #FFC700; /* Lighter gold on hover */
+    transform: scale(1.1);
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

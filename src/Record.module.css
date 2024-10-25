@@ -1,0 +1,273 @@
+/* Content title */
+.h1-title {
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #81343a;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.h2-title-record {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.RecordTitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.TitleContainer {
+  display: flex; /* Use flexbox */
+  align-items: center; /* Align titles vertically */
+}
+
+.triple-container {
+  display: flex;
+  gap: 100px; /* Adds space between the containers */
+  margin-bottom: 30px;
+}
+
+.details-container {
+  padding: 30px; /* Adds some padding inside each container */
+  border: 2px solid #8A252C;
+  border-radius: 20px; /* Optional: Slightly rounds the corners of the container */
+  background-color: #f9f9f9; /* Optional: Light background color */
+  width: 700px;
+}
+
+.search-container {
+  height: 50%;
+  width: 70%;
+}
+
+.search-container input {
+  width: 250px;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #333333;
+  background-color: #ffffff;
+}
+
+.search-container label {
+  margin-top: 10px;  
+}
+
+
+.filter-container{
+  margin-top: 50px;
+  max-width: 100%;
+}
+
+.record-action-icon{
+  color: #8A252C;
+  transition: background-color 0.3s, transform 0.3s;
+  font-size: 2.0rem;
+}
+
+.record-action-icon:hover {
+  transform: scale(1.25);
+}
+
+.details-table {
+  width: 100%;  
+  border-collapse: collapse;  
+  table-layout: fixed;  
+}
+
+.details-table td {
+  padding: 8px 15px;  
+}
+
+.details-table td:nth-child(1) {
+  width: 55%;  
+  text-align: left;  
+}
+
+.details-table td:nth-child(2) {
+  width: 10%; 
+  text-align: center; 
+}
+
+.details-table td:nth-child(3) {
+  width: 150%;  
+  text-align: left;  
+}
+
+/* Filter Styles */
+.filters {
+  margin-bottom: 20px; /* Space between filters and the chart */
+  display: flex;
+  gap: 10px; /* Space between individual filter elements */
+  flex-wrap: wrap; /* Allows filters to wrap to the next line if necessary */
+  text-align: center;
+}
+
+.filters select,
+.filterContainer select {
+  padding: 10px; /* Reduced padding for smaller buttons */
+  font-size: 14px; /* Adjust font size for smaller appearance */
+  border: 1px solid #ccc; /* Border styling */
+  border-radius: 4px; /* Rounded corners */
+  background-color: #fff; /* Background color */
+  color: #414141;   
+  margin-left: 10px;
+  width: 12%;
+  text-align: center;
+}
+
+.filterContainer {
+  margin: 20px 0px;
+  max-width: 100%;
+}
+
+/* Chart Styles */
+.chart {
+  padding: 50px; /* Padding around the chart for better spacing */
+  border: 2px solid #8A252C; /* Optional: border around the chart */
+  border-radius: 8px; /* Rounded corners for the chart */
+  background-color: #f9f9f9; /* Light background for contrast */
+}
+
+.chartWrapper {
+  margin-top: 30px;
+  max-width: 100%;
+  max-height: 95%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.chartContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px; /* Add margin if needed for spacing */
+}
+
+.pieChart-Container{
+  width: 600px;
+  height: 400px;
+  padding: 5px; /* Padding around the chart for better spacing */
+  border: 2px solid #8A252C; /* Optional: border around the chart */
+  border-radius: 8px; /* Rounded corners for the chart */
+  background-color: #f9f9f9; /* Light background for contrast */
+}
+
+.linechart-Container, .barchart-Container{
+  width: 1000px;
+  height: 500px;
+  padding: 10px; /* Padding around the chart for better spacing */
+  border: 2px solid #8A252C; /* Optional: border around the chart */
+  border-radius: 8px; /* Rounded corners for the chart */
+  background-color: #f9f9f9; /* Light background for contrast */  
+}
+
+
+/* Header styles */
+.view-student-record-header {
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.view-student-record-subheader {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Styles for Radio Button Wrapper */
+.view-wrapper {
+  --font-color-dark: #8A252C;
+  --font-color-light: #fff;
+  --bg-color: #fff;
+  --main-color: #8A252C;
+  --secondary-color: #a43a3f;
+  position: relative;
+  width: 250px;
+  height: 36px;
+  background-color: var(--bg-color);
+  border: 2px solid var(--main-color);
+  border-radius: 34px;
+  display: flex;
+  align-items: top;  
+  flex-direction: row;
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 14px;
+  margin-left: 75px;
+}
+
+.view-option {
+  margin-right: 5px;
+  width: 80.5px;
+  height: 28px;
+  position: relative;
+  top: 2px;
+  left: 2px;
+  border-radius: 34px;
+  transition: 0.25s cubic-bezier(0, 0, 0, 1);
+}
+
+.view-option:last-child {
+  margin-right: 4px;
+}
+
+.view-option:hover {
+  background-color: var(--secondary-color);
+}
+
+.view-option:hover .view-span {
+  color: var(--font-color-light);
+}
+
+.view-input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  appearance: none;
+  cursor: pointer;
+  border: none;
+}
+
+.view-input:focus, .view-input:active {
+  outline: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.view-btn {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.view-btn:focus, .view-btn:active {
+  outline: none;
+  box-shadow: none; /* Prevent any shadow when clicked */
+}
+.view-span {
+  color: var(--font-color-dark);
+}
+
+.view-input:checked + .view-btn {
+  background-color: var(--main-color);
+  transition: 0.2s cubic-bezier(0, 0, 0, 1);
+}
+
+.view-input:checked + .view-btn .view-span {
+  color: var(--font-color-light);
+  transition: 0.25s cubic-bezier(0, 0, 0, 1);
+}

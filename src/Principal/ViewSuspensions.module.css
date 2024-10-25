@@ -1,0 +1,30 @@
+/* Action Buttons */
+.suspension-action-buttons {
+    margin-top: 10px;
+}
+
+.suspension-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: white;
+    font-size: 14px;
+    transition: background-color 0.3s, transform 0.3s;
+    text-shadow: 1px 1px 3px #000; /* Slight shadow for all text */
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.suspension-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.suspension-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    text-shadow: 1px 1px 3px #ccc;  /* Slight shadow for disabled text */
+}

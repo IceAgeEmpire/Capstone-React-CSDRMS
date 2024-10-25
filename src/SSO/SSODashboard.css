@@ -1,0 +1,7 @@
+
+.content {
+    flex: 1; /* Take remaining space */
+    padding: 20px;
+    background-color: #fff; /* White background */
+}
+  

@@ -1,0 +1,142 @@
+.table-container {
+    max-height: 400px; /* Adjust height as needed */
+    overflow-y: auto; /* Ensure horizontal scrolling for smaller screens */
+    border: 2px solid #8A252C;
+}
+
+.table-container-half {
+    max-height: 600px; /* Adjust height as needed */
+    max-width: 25%;
+    border: 2px solid #8A252C;
+}
+
+.global-table {
+    width: 100%;
+    border-collapse: collapse; /* Ensures borders are not doubled */
+    table-layout: fixed; /* Ensures consistent cell width */
+}
+
+.global-table thead th {
+    position: sticky; /* Sticky header */
+    top: 0; /* Stick to the top */
+    z-index: 1; /* Ensure header stays on top of scrolling body */
+    background-color: #8A252C; /* Keep background color to prevent overlapping with content */
+    color: white; /* White text for headers */
+    text-shadow: 3px 3px 5px #000;  /* Slight shadow for text */
+    font-weight: 600;
+    border: none;
+}
+
+.global-table th, .global-table td {
+    padding: 12px;
+    text-align: center;
+    font-size: 16px; /* Larger font size for readability */
+    border-bottom: 1px solid #ddd;
+}
+
+.global-table td {
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    text-align: center; /* Center align table data */
+    cursor: pointer; /* Pointer cursor for rows */
+}
+
+.global-table tr:hover {
+    background-color: #f4f6f9; /* Highlighted row color on hover */
+}
+
+.selected-row {
+    background-color: #e0e0e0 !important;
+    color: #8A252C; /* Dark red text color for selected row */
+    font-weight: bold;
+}
+
+
+
+
+/* Small Version of Global Table */
+.global-table-small {
+    width: 100%;
+    border-collapse: collapse; /* Ensures borders are not doubled */
+    table-layout: fixed; /* Ensures consistent cell width */
+}
+
+.global-table-small thead th {
+    position: sticky; /* Sticky header */
+    top: 0; /* Stick to the top */
+    z-index: 1; /* Ensure header stays on top of scrolling body */
+    background-color: #8A252C; /* Keep background color to prevent overlapping with content */
+    color: white; /* White text for headers */
+    text-shadow: 3px 3px 5px #000;  /* Slight shadow for text */
+    font-weight: 600;
+    border-left: none;
+    border: 0.5px solid #8A252C;
+}
+
+.global-table-small th, .global-table-small td {
+    padding: 8px;
+    text-align: center;
+    font-size: 12px; /* Larger font size for readability */
+    border-bottom: 1px solid #ddd;
+}
+
+.global-table-small td {
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    text-align: center; /* Center align table data */
+    cursor: pointer; /* Pointer cursor for rows */
+}
+
+.global-table-small tr:hover {
+    background-color: #f4f6f9; /* Highlighted row color on hover */
+}
+
+
+/* Table Overview */
+.table-overview {
+    width: 100%;
+    border-collapse: collapse; /* Ensures borders are not doubled */
+    table-layout: fixed; /* Ensures consistent cell width */
+}
+
+.table-overview thead th {
+    position: sticky; /* Sticky header */
+    top: 0; /* Stick to the top */
+    z-index: 1; /* Ensure header stays on top of scrolling body */
+    background-color: #8A252C; /* Keep background color to prevent overlapping with content */
+    color: white; /* White text for headers */
+    text-shadow: 3px 3px 5px #000;  /* Slight shadow for text */
+    font-weight: 600;
+    border-left: none;
+    border: 0.5px solid #8A252C;
+}
+
+.table-overview th, .table-overview td {
+    padding: 8px;
+    text-align: center;
+    font-size: 14px; /* Larger font size for readability */
+    border-bottom: 1px solid #ddd;
+    min-width: 50px; /* Minimum width for other columns */
+}
+
+.table-overview td {
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    text-align: center; /* Center align table data */
+    cursor: pointer; /* Pointer cursor for rows */
+}
+
+/* Make the first td in each row wider */
+.table-overview tr td:first-child {
+    width: 200px; /* Width for the first column */
+}
+
+/* Ensure the last column has sufficient width as well */
+.table-overview th:last-child,
+.table-overview td:last-child {
+    min-width: 80px; /* Adjust as needed */
+}
+
+.table-overview tr:hover {
+    background-color: #f4f6f9; /* Highlighted row color on hover */
+}

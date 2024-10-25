@@ -1,0 +1,216 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* html, body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    scroll-behavior: smooth;
+    height: 100%;
+    font-size: 14px;
+    text-align: center;
+} */
+
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #8A252C;
+    margin: 0px 0 25px 0;
+    text-shadow: 1px 1px 3px #808080;  /* Slight shadow for all text */
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    margin: 15px 0px;
+    text-shadow: 1px 1px 3px #ccc;  /* Slight shadow for all text */
+}
+
+/* Search Bar */
+.filter-search-bar {
+    display: flex; /* Ensure children are aligned correctly */
+    align-items: center; /* Center the icon and input vertically */
+    padding-left: 10px; /* Space to the left of the input */
+}
+.searchRec {
+    width: 350px;
+    padding: 10px; /* Add left padding to avoid overlap with the icon */
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    font-size: 15px;
+}
+
+.title-search{
+    justify-content: space-between; /* Evenly distribute space between elements */
+}
+
+/* Search Icon Styles */
+.search-icon {
+    position: absolute; /* Position the icon absolutely */
+    left: 10px; /* Space from the left */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust vertical position */
+    color: #919191; /* Icon color */
+    pointer-events: none; /* Prevent interaction */
+    width: 20px; /* Adjust size if necessary */
+    height: 20px; /* Adjust size if necessary */
+}
+
+/* Table Container */
+
+.user-center-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically (optional) */
+}
+.table-container {
+    max-height: 400px; /* Adjust height as needed */
+    max-width: 850px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    border: 2px solid #8A252C;
+}
+
+/* Table Styling */
+.user-table {
+    width: 100%;
+    border-collapse: collapse; /* Ensures borders are not doubled */
+    table-layout: fixed; /* Ensures consistent cell width */
+}
+
+.user-table thead {
+    position: sticky; /* Standard syntax */
+    top: 0; /* Fixed to the top */
+    z-index: 1; /* Ensure header stays on top of scrolling body */
+}
+
+.user-table th, .user-table td {
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.user-table th {
+    background-color: #8A252C;
+    color: #fff;
+    text-shadow: 3px 3px 5px #000;  /* Slight shadow for all text */
+    font-weight: 600;
+}
+
+.user-table td {
+    cursor: pointer;
+    border-right: 1px solid #ccc; /* Border for body cells */
+    border-bottom: 1px solid #ccc; /* Border for body cells */
+}
+
+.user-table tr {
+    background-color:#fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add shadow to create "floating" effect */
+}
+
+
+.user-table tr:hover {
+    background-color: #f4f6f9;
+}
+
+.selected-row {
+    background-color: #e0e0e0 !important;
+    color: #8A252C; /* Dark red text color for selected row */
+    font-weight: bold;
+}
+
+/* Center User Type column */
+.user-table th:nth-child(3),
+.user-table td:nth-child(3) {
+    width: 300px; /* Set a specific width for the column */
+    overflow: hidden; /* Optional: Hide overflowed content */
+    text-overflow: ellipsis; /* Optional: Add ellipsis for overflowed text */
+    white-space: nowrap; /* Optional: Prevent text from wrapping */
+}
+
+.user-table th:nth-child(4),
+.user-table td:nth-child(4) {
+    text-align: center;
+    width: 120px; /* Set a specific width for the column */
+    border-right: none;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically (optional) */
+}
+
+.action-btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    transition: background-color 0.3s, transform 0.3s;
+    font-weight: bold;
+}
+
+.admin-add-btn {
+    background-color: #4caf50;
+    text-shadow: 1px 1px 3px #000;  /* Slight shadow for all text */
+}
+
+.admin-add-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.edit-btn {
+    background-color: #2196f3;
+    text-shadow: 1px 1px 3px #000;  /* Slight shadow for all text */
+}
+
+.edit-btn:hover {
+    background-color: #1e88e5;
+    transform: scale(1.05);
+}
+
+.delete-btn {
+    background-color: #f44336;    
+    text-shadow: 1px 1px 3px #000;  /* Slight shadow for all text */
+}
+
+.delete-btn:hover {
+    background-color: #e53935;
+    transform: scale(1.05);
+}
+
+.action-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    text-shadow: 1px 1px 3px #ccc;  /* Slight shadow for all text */
+}
+
+/* Fade In Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.no-results {
+    color: #888; /* Optional: Change color to gray for better visibility */
+    background-color: #fff;
+    padding: 10px; /* Optional: Add some padding for spacing */
+  }
+  

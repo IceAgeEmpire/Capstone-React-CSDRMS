@@ -1,0 +1,190 @@
+/* Background style */
+.loginbg {
+  width: 100%;
+  height: 100vh;
+  background-image: url('./image-citubg.png'); /* Path to your image */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.titleImage {
+  background-image: url('./image-citutitle.png'); /* Path to your image */
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: fixed;
+  top: 25px;
+  left: 25px; /* Use vw for responsiveness */
+  width: 500px; /* Adjust width relative to viewport */
+  height: 50vw; /* Keep height auto to maintain aspect ratio */
+  z-index: 1;
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+.ssoImage {
+  background-image: url('./image-sso-color.png'); /* Path to your image */
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: fixed;
+  top: 20px;
+  right: 20px; /* Use vw for responsiveness */
+  width: 175px; /* Make width relative to the screen */
+  height: 175px; /* Keep height auto to maintain aspect ratio */
+  z-index: 1;
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+/* Adjust form container */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100vh;
+}
+
+.form_area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f9f1f2;
+  height: auto;
+  width: 80vw; /* Adjust width for mobile screens */
+  max-width: 450px; /* Ensure it doesn't stretch too wide on larger screens */
+  border: 2px solid #264143;
+  border-radius: 20px;
+  box-shadow: 3px 4px 0px 1px #E99F4C;
+  margin-top: 3%;
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+.title {
+  color: #8A252C;
+  font-weight: 1000;
+  font-size: 1.5em;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  position: relative;
+  padding-bottom: 5px;
+  text-shadow: 1px 1px 3px #c2c2c2;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 120%;
+  height: 2px;
+  background: linear-gradient(180deg, #8A252C, #e8bd26);
+  transform: translateX(-10%);
+}
+
+.sub_title {
+  font-weight: 600;
+  margin: 5px 0;
+  text-shadow: 1px 1px 3px #c2c2c2;
+}
+
+.form_group {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  margin: 10px;
+}
+
+.form_style {
+  outline: none;
+  border: 2px solid #264143;
+  box-shadow: 3px 4px 0px 1px #e8bd26;
+  width: 80vw; /* Adjust width */
+  max-width: 290px; /* Set max-width to prevent stretching */
+  padding: 12px 10px;
+  border-radius: 4px;
+  font-size: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form_style:focus,
+.btn:focus {
+  transform: translateY(4px);
+  box-shadow: 1px 2px 0px 0px #e8bd26;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn {
+  padding: 15px;
+  margin: 25px 0px;
+  width: 50vw; /* Adjust width for responsiveness */
+  max-width: 190px; /* Set a max-width for larger screens */
+  font-size: 15px;
+  background: #8A252C;
+  border-radius: 10px;
+  font-weight: 800;
+  box-shadow: 3px 3px 0px 0px #e8bd26;
+  text-shadow: 1px 1px 3px #000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: .9;
+  transform: scale(1.05);
+  box-shadow: 5px 5px 0px 0px #e8bd26;
+}
+
+.btn:active {
+  transform: translateY(4px);
+  box-shadow: 1px 2px 0px 0px #e8bd26;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Keyframes for animations */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+  .titleImage {
+    width: 60vw; /* Adjust image width for smaller screens */
+    left: 1vw; /* Adjust positioning */
+  }
+
+  .ssoImage {
+    width: 120px;
+    margin-left: 75px;
+    left: calc(100% - 27vw); /* Adjust position to fit smaller screens */
+  }
+
+  .btn {
+    width: 70vw; /* Make the button larger on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .titleImage {
+    width: 80vw;
+    left: 10vw;
+  }
+
+  .ssoImage {
+    width: 40vw;
+    left: calc(100% - 45vw); /* Further adjust for very small screens */
+  }
+
+  .btn {
+    width: 80vw;
+  }
+}

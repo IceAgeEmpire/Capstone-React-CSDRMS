@@ -1,0 +1,218 @@
+.tableContainer {
+  max-width: 25%;
+  max-height: 400px; /* Adjust height as needed */
+  overflow-y: auto; /* Enable vertical scrolling */
+  border: 2px solid #8A252C;  
+}
+
+.divide {
+  display: flex;  
+  gap: 20px;
+  overflow-y: auto; /* Enable vertical scrolling */
+  justify-content: center; /* Center horizontally */
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse; /* Ensures borders are not doubled */
+  background-color: #fff;
+  table-layout: fixed; /* Ensures consistent cell width */
+}
+
+.tableInner {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Ensures consistent cell width */
+}
+
+.tableInner thead {
+  position: sticky; /* Standard syntax */
+  top: 0; /* Fixed to the top */
+  z-index: 1; /* Ensure header stays on top of scrolling body */
+}
+
+.tableInner tr {
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add shadow to create "floating" effect */
+}
+
+.tableInner tr:hover {
+  background-color: #f4f6f9;
+}
+
+.selected-row {
+  background-color: #e0e0e0 !important;
+}
+
+.tableInner th, .tableInner td {
+  padding: 10px;
+  text-align: center;
+}
+
+.tableInner th {
+  background-color: #8A252C;
+  color: white;
+  text-shadow: 3px 3px 5px #000;  /* Slight shadow for all text */
+  font-weight: bold;
+}
+
+.tableInner td{
+  cursor: pointer;
+  border-bottom: 1px solid #ccc; /* Border for body cells */
+  font-size: 14px;
+}
+
+.addButtonContainer {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically (optional) */
+}
+
+.modalContainer {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 370px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modalHeader {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.class-container {
+  flex-direction: column; /* Arrange children in a column */
+}
+
+.class-group {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.classgroup-label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #8A252C;
+  margin-left: 40px;
+}
+
+.classgroup-label-year {
+  font-size: 18px;
+  font-weight: bold;
+  color: #8A252C;
+  margin-left: 30px;
+}
+
+.classgroup-input {
+  width: 50%; /* Fixed width for input and select boxes */
+  padding: 10px; /* Increase padding for better touch targets */
+  font-size: 14px; /* Increase font size for better readability */
+  border: 1px solid #ddd; /* Add border for inputs */
+  border-radius: 5px; /* Add border radius for inputs */
+  box-sizing: border-box; /* Include padding and border in input width */
+  background-color: #f9f9f9; /* Optional: Background color for better UX */
+  margin-left: auto;
+  margin-right: 40px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.classgroup-input-year {
+  width: 40%; /* Fixed width for input and select boxes */
+  padding: 10px; /* Increase padding for better touch targets */
+  font-size: 14px; /* Increase font size for better readability */
+  border: 1px solid #ddd; /* Add border for inputs */
+  border-radius: 5px; /* Add border radius for inputs */
+  box-sizing: border-box; /* Include padding and border in input width */
+  background-color: #f9f9f9; /* Optional: Background color for better UX */
+  margin-left: auto;
+  margin-right: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  font-size: 14px;
+  transition: background-color 0.3s, transform 0.3s;
+  text-shadow: 1px 1px 3px #000;  /* Slight shadow for all text */
+}
+
+.button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.buttonCancel {
+  background-color: #e53935;
+  text-shadow: 1px 1px 3px #000;  /* Slight shadow for all text */
+}
+
+.buttonCancel:hover {
+  background-color: #e53935;
+}
+
+/* Fade In Animation */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+/* Search bar container */
+.searchContainer {
+  display: flex;
+  justify-content: center;
+}
+
+/* Search input field styling */
+.searchInput {
+  width: 200px;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  font-size: 15px;
+}
+
+.noresult{
+  color: #888; /* Optional: Change color to gray for better visibility */
+  background-color: #fff;
+  text-shadow: 1px 1px 3px #fff;  /* Slight shadow for all text */
+  padding: 10px; /* Optional: Add some padding for spacing */
+}

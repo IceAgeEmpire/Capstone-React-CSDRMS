@@ -1,0 +1,190 @@
+/* Overlay and content container for the modal */
+.report-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+  
+  .closeButton {
+    background: none;
+    border: none;
+    font-size: 24px;
+    position: absolute;
+    top: 10px;
+    right: 10px; /* Keep the button inside the modal */
+    cursor: pointer;
+    color: #333;
+  }
+
+.report-modal-content {
+    background-color: #fff;
+    padding: 20px;
+    width: 550px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    border: 2px solid #000;
+}
+
+.suspension-modal-content {
+    background-color: #fff;
+    padding: 20px;
+    width: 450px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    border: 2px solid #000;
+}
+
+.report-view-modal-content {
+    background-color: #fff;
+    padding: 20px;
+    width: 75%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    border: 2px solid #000;
+}
+
+
+/* Input and Dropdown Styles */
+.report-container {
+    margin-bottom: 5px;
+}
+
+.searchWrapper {
+    position: relative;
+}
+
+.clearButton {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #666;
+    position: absolute;
+    right: 5%;
+    top: 23%;
+    cursor: pointer;
+    transform: scale(1.05);
+    font-weight: bold;
+}
+
+.dropdown {
+    list-style-type: none;
+    padding: 0;
+    margin: 5px 0 0 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-height: 150px;
+    max-width: 360px;  
+    overflow-y: auto;
+    margin-left: 21.7%;
+}
+
+.dropdownItem {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.dropdownItem:hover {
+    background-color: #f1f1f1;
+}
+
+/* Button group and buttons for the modal */
+.report-buttonGroup {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}   
+
+.report-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: white;
+    font-size: 14px;
+    transition: background-color 0.3s, transform 0.3s;
+    text-shadow: 1px 1px 3px #000; /* Slight shadow for all text */
+}
+
+.report-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.report-button-cancel {
+    background-color: #e53935;
+    text-shadow: 1px 1px 3px #000; /* Slight shadow for all text */
+}
+
+.report-button-cancel:hover {
+    background-color: #c82333;
+}
+
+
+.report-group {
+    display: flex; /* Use flexbox */
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.report-group label {
+    margin-right: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #800000;
+}
+
+.report-input{
+    margin-right: 10px; /* Add right margin */
+    width: 100%;
+    margin-left: 26px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Specific styles for the textarea in ReportModal */
+.report-modal-textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px; /* Match the border-radius with the input */
+    border: 1px solid #ccc; /* Match the border style with the input */
+    margin-bottom: 10px; /* Add space below */
+    resize: vertical; /* Allow vertical resizing */
+    font-family: Arial, sans-serif;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+    margin-left: auto;
+}
+
+.report-modal-textarea:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.2);
+}
+
+.suspension-input{
+    margin-right: 10px; /* Add right margin */
+    width: 35%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-bottom: 10px;
+    text-align: center;
+}

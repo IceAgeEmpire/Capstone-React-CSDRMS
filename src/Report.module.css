@@ -1,0 +1,94 @@
+.actionButtons{
+  margin-top: 10px;
+}
+
+.report-action-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  font-size: 14px;
+  transition: background-color 0.3s, transform 0.3s;
+  text-shadow: 1px 1px 3px #000; /* Slight shadow for all text */
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.report-action-button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.report-create-btn {
+  background-color: #8A252C;
+  text-shadow: 1px 1px 3px #000;  /* Slight shadow for all text */
+}
+
+.report-create-btn:hover {
+  background-color: #7A1E24;
+  transform: scale(1.05);
+}
+
+.report-view-btn {
+  background-color: #e8bd26;
+  text-shadow: 1px 1px 3px #000;  /* Slight shadow for all text */
+}
+
+.report-view-btn:hover {
+  background-color: #C69A1E;
+  transform: scale(1.05);
+}
+
+.report-edit-btn {
+  background-color: #2196f3;
+  text-shadow: 1px 1px 3px #000;  /* Slight shadow for all text */
+}
+
+.report-edit-btn:hover {
+  background-color: #1e88e5;
+  transform: scale(1.05);
+}
+
+.report-suspension-btn {
+  background-color: #FF9800 ;
+  text-shadow: 1px 1px 3px #000; /* Slight shadow for all text */
+}
+
+.report-suspension-btn:hover {
+  background-color: #FB8C00 ;
+  transform: scale(1.05);
+}
+
+.report-action-button:disabled {
+  background-color: #D3D3D3; /* Light Gray */
+  color: #fff; /* Muted gray text */
+  cursor: not-allowed;
+  border: 1px solid #CCCCCC; /* Light gray border */
+  text-shadow: none;
+}
+
+.report-action-button:disabled:hover {
+  background-color: #D3D3D3; /* Keep background unchanged on hover */
+  cursor: not-allowed;
+  transform: none;
+}
+
+.report-suspension-button:disabled {
+  background-color: #D3D3D3; /* Light Gray */
+  color: #fff; /* Muted gray text */
+  cursor: not-allowed;
+  border: 1px solid #CCCCCC; /* Light gray border */
+  text-shadow: none;
+  transform: none;
+}
+
+.report-suspension-button:disabled:hover {
+  background-color: #D3D3D3; /* Keep background unchanged on hover */
+  cursor: not-allowed;
+}
+
+
+

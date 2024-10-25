@@ -1,0 +1,127 @@
+/* Table Container */
+.time-center-container {
+    display: flex;
+    justify-content: left; /* Center horizontally */
+    align-items: center; /* Center vertically (optional) */
+}
+
+
+.time-table-container {
+    max-height: 400px; /* Adjust height as needed */
+    max-width: 100%;
+    overflow-y: auto; /* Enable vertical scrolling */
+    border: 2px solid #8A252C;
+}
+
+/* Table Styling */
+.time-table {
+    width: 100%;
+    border-collapse: collapse; /* Ensures borders are not doubled */
+    table-layout: fixed; /* Ensures consistent cell width */
+}
+
+.time-table thead {
+    position: sticky; /* Fixed to the top */
+    top: 0; 
+    z-index: 1; 
+}
+
+.time-table th, .time-table td {
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.time-table th {
+    background-color: #8A252C; /* Header color */
+    color: #fff;
+    text-shadow: 3px 3px 5px #000;  /* Slight shadow for all text */
+    font-weight: 600;
+}
+
+.time-table td {
+    cursor: pointer;
+    border-right: 1px solid #ccc; /* Border for body cells */
+    border-bottom: 1px solid #ccc; /* Border for body cells */
+}
+
+.time-table tr {
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add shadow to create "floating" effect */
+}
+
+.time-table tr:hover {
+    background-color: #f4f6f9; /* Hover effect */
+}
+
+.time-table th:nth-child(3),
+.time-table td:nth-child(3) {   
+    width: 300px; /* Set a specific width for the column */
+    overflow: hidden; /* Optional: Hide overflowed content */
+    text-overflow: ellipsis; /* Optional: Add ellipsis for overflowed text */
+    white-space: nowrap; /* Optional: Prevent text from wrapping */
+}
+
+/* Search Bar */
+.logfilter-search-bar {
+    display: flex;
+    justify-content: center;
+}
+
+.logsearchRec {
+    width: 380px;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    font-size: 15px;
+}
+
+/* Button Styles for View Time Logs */
+.log-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: left; /* Center horizontally */
+    align-items: center; /* Center vertically (optional) */
+}
+
+.log-selected-row {
+    background-color: #e0e0e0 !important;
+    color: #8A252C; /* Dark red text color for selected row */
+    font-weight: bold;
+}
+
+.log-no-results {
+    color: #888; /* Optional: Change color to gray for better visibility */
+    background-color: #fff;
+    padding: 10px; /* Optional: Add some padding for spacing */
+}
+
+.viewlogButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #e8bd26;
+    color: white;
+    font-size: 14px;
+    transition: background-color 0.3s, transform 0.3s;
+    text-shadow: 1px 1px 3px #000;  /* Slight shadow for all text */
+}
+
+.viewlogButton:hover {
+    background-color: #C69A1E;
+    transform: scale(1.05);}
+
+.active .viewlogButton {
+    display: inline-block; /* Show when row is active */
+}
+
+.viewlogButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    text-shadow: 1px 1px 3px #ccc;  /* Slight shadow for all text */
+}

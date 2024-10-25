@@ -1,0 +1,313 @@
+/* General styles */
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    background: #f7f9fc; /* Light background for a clean look */
+    min-height: 100vh; /* Ensure it covers the full viewport height */
+    font-family: 'Arial', sans-serif; /* Modern, clean font */
+}
+
+.sidenav {
+    width: 250px;
+    background-color: #8B0000; /* Dark red background */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.sidebar-logo {
+    width: 150px;
+    margin-bottom: 20px;
+    animation: zoomIn 1s ease-in-out;
+}
+
+.styled-link {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+    background-color: #FFD700; /* Gold background for links */
+    color: #8B0000; /* Dark red text for links */
+}
+
+.styled-link:hover {
+    background-color: #FFC700; /* Lighter gold on hover */
+    transform: translateX(10px);
+}
+
+.icon {
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+
+.styled-link:hover .icon {
+    transform: rotate(360deg);
+}
+
+.link-text {
+    font-size: 18px;
+}
+
+.logoutbtn {
+    background-color: #FFD700; /* Gold background */
+    color: #8B0000; /* Dark red text */
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: auto;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.logoutbtn:hover {
+    background-color: #FFC700; /* Lighter gold on hover */
+    transform: scale(1.1);
+}
+
+/* Content styles */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    background: #ecf0f1;
+    animation: slideIn 1s ease-in-out;
+}
+
+.case-container {
+    background: #fff; /* White background for a clean look */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.case-container h1 {
+    margin-bottom: 20px;
+    color: #8B0000; /* Dark red text color */
+    animation: fadeInDown 1s ease-in-out;
+    font-family: 'Arial', sans-serif; /* Modern font */
+}
+
+.case-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 15px; /* Add spacing between rows */
+    margin-bottom: 20px;
+    background: #fff; /* White background for a clean look */
+    border-radius: 8px;
+    overflow: hidden;
+    color: #2c3e50; /* Dark text color for contrast */
+    table-layout: fixed;
+}
+
+.case-table th,
+.case-table td {
+    padding: 15px;
+    text-align: left;
+    transition: background 0.3s, color 0.3s;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.case-table th {
+    background-color: #8B0000; /* Dark red background for header */
+    color: white; /* White text for contrast */
+    text-align: center;
+    font-size: 18px;
+    position: sticky;
+    top: 0;
+}
+
+.case-table td {
+    text-align: center;
+    font-size: 16px;
+    background: #fff;
+}
+
+.case-table tr {
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add shadow to create "floating" effect */
+    border-radius: 8px; /* Round corners to create card effect */
+    background: #fff; /* Ensure each row has a white background */
+}
+
+.case-table tr:hover {
+    background-color: #f7f9fc; /* Light hover color */
+    transform: scale(1.01);
+}
+
+.case-table tr.selected-row {
+    background-color: #FFD700; /* Gold background color for selected row */
+    color: #8B0000; /* Dark red text color for selected row */
+    font-weight: bold; /* Bold text for selected row */
+}
+
+.status-complete {
+    color: green;
+}
+
+.status-ongoing {
+    color: red;
+}
+
+.add-case,
+.delete-case,
+.complete-case {
+    background-color: #FFD700; /* Gold background for buttons */
+    color: #8B0000; /* Dark red text for buttons */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background 0.3s, transform 0.3s;
+    font-size: 16px; /* Larger text for better readability */
+}
+
+.add-case:hover,
+.delete-case:hover,
+.complete-case:hover {
+    background-color: #FFC700; /* Lighter gold on hover */
+    transform: scale(1.1);
+}
+
+.send-to-sso {
+    background-color: #8B0000; /* Dark red background */
+    color: white; /* White text */
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    font-size: 14px;
+}
+
+.send-to-sso:hover {
+    background-color: #A30000; /* Slightly lighter dark red on hover */
+    transform: scale(1.1);
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+    from { transform: translateX(-20px); opacity: 0; }
+    to { transform: translateX(0); opacity: (1); }
+}
+
+@keyframes fadeInRight {
+    from { transform: translateX(20px); opacity: 0; }
+    to { transform: translateX(0); opacity: (1); }
+}
+
+.add-case,
+.delete-case,
+.complete-case {
+    background-color: #FFD700; /* Gold background */
+    color: #8B0000; /* Dark red text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background 0.3s, transform 0.3s;
+    font-size: 16px; /* Larger text for better readability */
+}
+
+.add-case:hover,
+.delete-case:hover,
+.complete-case:hover {
+    background-color: #FFC700; /* Lighter gold on hover */
+    transform: scale(1.1);
+}
+
+.delete-case:disabled,
+.complete-case:disabled {
+    background-color: #bdc3c7; /* Grey background for disabled state */
+    color: #7d7d7d; /* Grey text for disabled state */
+    cursor: not-allowed;
+}
+
+.send-to-sso {
+    background-color: #8B0000; /* Dark red background */
+    color: white; /* White text */
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    font-size: 14px;
+}
+
+.send-to-sso:hover {
+    background-color: #A30000; /* Slightly lighter dark red on hover */
+    transform: scale(1.1);
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+    from { transform: translateX(-20px); opacity: 0; }
+    to { transform: translateX(0); opacity: (1); }
+}
+
+@keyframes fadeInRight {
+    from { transform: translateX(20px); opacity: 0; }
+    to { transform: translateX(0); opacity: (1); }
+}

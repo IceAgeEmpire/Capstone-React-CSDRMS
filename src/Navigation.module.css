@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+/* Apply box-sizing globally */
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Flex Wrapper */
+.wrapper {
+    display: flex;
+    height: 100vh;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Sidebar Logo Styling */
+.sidebar-logo {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 40px;
+}
+
+/* Sidebar Styling */
+.sidenav {
+    width: 175px;
+    height: 100vh;
+    top: 75px;
+    background: #e4e4e4;
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    transition: width 0.3s ease; /* Smooth transition for width change */
+}
+
+.sidenav-title {
+    color: #414141; 
+    margin: 5px 0;
+    text-align: left; /* Align text to the left */
+    width: 100%; /* Ensures it takes full width of the sidebar */
+    padding: 0px 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    animation: fadeInLeft 0.8s ease-in-out;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* Link Styling */
+.sidenav a {
+    margin: 10px 0px;
+    text-decoration: none;
+}
+
+.styled-link {
+    width: 100%; 
+    height: 8%;
+    border-radius: 15px;
+    display: flex;/* Content Area */
+    align-items: center;
+    color: #414141; 
+    font-family: Poppins, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    animation: fadeInLeft 0.8s ease-in-out;
+    padding: 0px 10px;
+}
+
+.styled-link:hover {
+    cursor: pointer;
+    background-color: #e8bd26; /* Highlight white on hover */
+    color: #000; /* Change text to match sidebar background */
+    text-shadow: 1px 1px 3px #808080;  /* Slight shadow for all text */
+}
+
+.icon {
+    margin-right: 8px;
+    font-size: 1.4rem;
+}
+
+/* Header Styling */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Make the header span the entire width of the screen */
+    height: 75px;
+    background-color: #8A252C; /* Same color as the sidebar */
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between; /* Evenly distribute space between elements */
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 999; /* Ensure the header is on top */
+}
+
+/* Header Container */
+.JHSheaderContainer {
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+/* JHS Success Hub Logo */
+.JHSLogo {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px; /* Add some space between logo and title */
+}
+
+/* JHS Success Hub Title */
+.JHSTitle {
+    text-shadow: 3px 3px 5px #000; /* Slight shadow for all text */
+    font-size: 2em; /* Adjust font size as needed */
+    color: #fff; /* You can change this to your desired color */
+}
+
+/* Content title */
+.h1-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #8A252C;
+    font-weight: bold;
+}
+
+.TitleContainer {
+    display: flex; /* Use flexbox */
+    align-items: center; /* Align titles vertically */
+}
+
+/* Content Area */
+.content {
+    flex-grow: 1;
+    padding: 80px 50px;
+    background-color: #fff;
+    margin-top: 30px;
+    margin-left: 175px;
+    box-sizing: border-box;
+    transition: margin-left 0.3s ease; /* Smooth transition for margin-left change */
+    overflow-y: auto;
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: center; /* Aligns vertically centered */
+    gap: 30px; /* Optional: Add some space between the icons */
+    margin-right: 20px;
+}
+
+.header-icon {
+    cursor: pointer;
+    color: white;
+    font-size: 1.7rem; /* Adjust the size of the bell icon */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.header-icon:hover {
+    transform: scale(1.20);
+    background-color: #8A252C; /* Set the icon color to white */
+}
+
+.badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Animation Definitions */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes fadeInLeft {
+    from { transform: translateX(-20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    /* Sidebar adjustments */
+    .sidenav {
+        width: 60px; /* Collapse the sidebar to icon-only */
+        text-align: center;
+    }
+
+    .sidenav-title {
+        font-size: 12px; /* Smaller font size for tablets */
+        margin-left: -40px;
+    }
+
+    .h1-title{
+        margin-top: 10px;
+    }
+
+    /* Hide logo in collapsed view */
+    .sidebar-logo {
+        display: none;
+    }
+
+    /* Link styling in collapsed sidebar */
+    .styled-link {
+        justify-content: center; /* Center icons */
+        padding-left: 0; /* Remove padding */
+        text-align: center;
+        font-size: 0; /* Hide link text */
+    }
+
+    /* Icon adjustment for collapsed sidebar */
+    .icon {
+        margin-right: 0;
+        font-size: 1.8rem; /* Resize icon for smaller sidebar */
+    }
+
+    /* Content area adjustments */
+    .content {
+        margin-left: 60px; /* Adjust content to fit with the collapsed sidebar */
+        padding: 50px 20px; /* Smaller padding for mobile */
+    }
+
+    /* Header adjustments */
+    .header {
+        width: 100%;
+    }
+}
+
+/* Ultra small screen adjustments */
+@media screen and (max-width: 480px) {
+    .sidenav {
+        width: 50px; /* Smaller width for ultra small screens */
+    }
+
+    .sidenav-title {
+        font-size: 12px; /* Even smaller font size for mobile */
+    }
+
+    .h1-title{
+        margin-top: 10px;
+    }
+
+    .content {
+        padding: 30px 10px; /* Smaller padding for ultra small screens */
+    }
+
+    .header {
+        left: 50px;
+        width: calc(100% - 50px);
+    }
+
+    /* Font and icon adjustments */
+    .icon {
+        font-size: 1.5rem;
+    }
+}

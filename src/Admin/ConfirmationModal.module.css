@@ -1,0 +1,62 @@
+/* ConfirmationModal.module.css */
+.overlay {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(0, 0, 0, 0.5);
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1000;
+}
+
+.modal {
+background: #fff;
+padding: 20px;
+border-radius: 8px;
+width: 380px;
+text-align: center;
+position: relative;
+border: 2px solid #000;
+}
+
+.confirmBtn {
+background-color: #4caf50;
+color: #fff;
+border: none;
+border-radius: 5px;
+padding: 10px 20px;
+margin: 22px 20px 0px 0px;
+transition: transform 0.3s ease, background-color 0.3s ease-in-out;
+text-shadow: 1px 1px 3px #000;/* Slight shadow for all text */
+font-weight: bold;
+font-size: 0.85rem;
+}
+
+.confirmBtn:hover {
+background-color: #45a049;
+cursor: pointer;
+transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.cancelBtn {
+background-color: #f44336; 
+color: #fff;
+border: none;
+border-radius: 5px;
+padding: 10px 20px;
+margin: 22px 0px 0px 20px;
+transition: transform 0.3s ease, background-color 0.3s ease-in-out;
+text-shadow: 1px 1px 3px #000;/* Slight shadow for all text */
+font-weight: bold;
+font-size: 0.85rem;
+}
+
+.cancelBtn:hover {
+background-color: #e53935; 
+cursor: pointer;
+transform: scale(1.05); /* Slightly enlarge on hover */
+}
+

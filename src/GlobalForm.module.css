@@ -1,0 +1,199 @@
+.content {
+    flex: 1; /* Take remaining space */
+    padding: 80px;
+    background-color: #f9f9f9; /* Light gray background */
+}
+
+.contentform {
+    max-width: 500px; /* Limit form container width */
+    margin: 1px auto; /* Center the form container horizontally */
+    padding: 20px; /* Add padding to the form container */
+    border: 1px solid #ddd; /* Add border to the form container */
+    border-radius: 5px; /* Add border radius to the form container */
+    background-color: #fff; /* White background for the form container */
+}
+
+.form-container {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Arrange children in a column */
+}
+
+.form-group {
+    display: flex; /* Use flexbox */
+    margin-bottom: 15px; /* Add space between form groups */
+}
+
+.form-group label {
+    display: flex;
+    flex: 1; /* Allow label to take up space */
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #8A252C;
+}
+
+.form-group-remarks {
+    display: flex;
+    flex: 1; /* Allow label to take up space */
+    align-items: normal;
+    font-size: 18px;
+    font-weight: bold;
+    color: #8A252C;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="password"],
+.form-group input[type="email"],
+.form-group select {
+    width: 250px; /* Fixed width for input and select boxes */
+    padding: 10px; /* Increase padding for better touch targets */
+    font-size: 16px; /* Increase font size for better readability */
+    border: 1px solid #ddd; /* Add border for inputs */
+    border-radius: 5px; /* Add border radius for inputs */
+    box-sizing: border-box; /* Include padding and border in input width */
+    margin-left: auto; /* Align to the right */
+    display: block; /* Ensure inputs and selects are block elements */
+    flex: 1 1;
+}
+
+.form-group-textarea {
+    width: 60%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px; /* Match the border-radius with the input */
+    border: 1px solid #ccc; /* Match the border style with the input */
+    margin-bottom: 10px; /* Add space below */
+    resize: vertical; /* Allow vertical resizing */
+    font-family: Arial, sans-serif;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+    margin-left: auto;
+}
+
+.form-group input[type="date"],
+.form-group input[type="time"],
+.form-group select {
+    width: 80px; /* Fixed width for input and select boxes */
+    padding: 10px; /* Increase padding for better touch targets */
+    font-size: 16px; /* Increase font size for better readability */
+    border: 1px solid #ddd; /* Add border for inputs */
+    border-radius: 5px; /* Add border radius for inputs */
+    box-sizing: border-box; /* Include padding and border in input width */
+    margin-left: auto; /* Align to the right */
+    display: block; /* Ensure inputs and selects are block elements */
+    flex: 1 1;
+}
+
+.select {
+    appearance: none; /* Remove default select arrow */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5H7z"/></svg>'); /* Add custom select arrow */
+    background-repeat: no-repeat; /* Prevent arrow from repeating */
+    background-position: right 10px center; /* Position arrow on the right with padding */
+}
+
+.global-dropdown {
+    list-style-type: none;
+    margin: 5px 0 0 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-height: 150px;
+    max-width: 250px;
+    overflow-y: auto;
+    cursor: pointer;
+}
+
+.global-dropdown-item {
+    padding: 10px;
+    background-color: #fff;
+}
+
+.global-dropdown-item:hover {
+    padding: 10px;
+    background-color: #f1f1f1;
+}
+
+.global-buttonGroup {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.global-button {
+    background-color: #861b1c; /* Button color */
+    font-weight: bold;
+    color: #fff; /* White text color */
+    border: none; /* Remove button border */
+    border-radius: 20px; /* Add border radius to button */
+    padding: 12px 20px; /* Increase padding for better touch targets */
+    font-size: 16px; /* Increase font size for better readability */
+    cursor: pointer; /* Show pointer cursor on hover */
+    transition: transform 0.3s ease, background-color 0.3s ease-in-out;
+    animation: fadeInLeft 0.8s ease-in-out;
+    text-shadow: 1px 1px 3px #000;  /* Slight shadow for all text */
+}
+
+.global-button:hover {
+    background-color: #6d3f3e; 
+    transform: scale(1.05); /* Slightly enlarge on hover */ 
+}
+
+.green-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: white;
+    font-size: 14px;
+    transition: background-color 0.3s, transform 0.3s;
+    text-shadow: 1px 1px 3px #000;  /* Slight shadow for all text */
+}
+
+.green-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.red-button {
+    background-color: #e53935;
+    text-shadow: 1px 1px 3px #000;  /* Slight shadow for all text */
+}
+
+.red-button:hover {
+    background-color: #e53935;
+}
+
+.maroon-button {
+    background-color: #861b1c;
+    text-shadow: 1px 1px 3px #000;  /* Slight shadow for all text */
+}
+
+.maroon-button:hover {
+    background-color: #6d3f3e;
+
+}
+
+.orange-button {
+    background-color: #FF9800;
+    text-shadow: 1px 1px 3px #000;  /* Slight shadow for all text */
+}
+
+.orange-button:hover {
+    background-color: #FB8C00;
+
+}
+
+.yellow-button {
+    background-color: #e8bd26;
+    text-shadow: 1px 1px 3px #000;  /* Slight shadow for all text */
+}
+
+.yellow-button:hover {
+    background-color: #C69A1E;
+    transform: scale(1.05);
+}

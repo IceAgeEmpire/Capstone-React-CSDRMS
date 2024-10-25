@@ -1,0 +1,79 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    border: 1px solid #000;
+  }
+
+  .modal textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px; /* Match the border-radius with the input */
+    border: 1px solid #ccc; /* Match the border style with the input */
+    margin-bottom: 10px; /* Add space below */
+    resize: vertical; /* Allow vertical resizing */
+    font-family: Arial, sans-serif;
+    transition: border-color 0.3s ease;
+    margin-left: auto;
+  }
+  
+  .modal textarea:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.2);
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .select,
+  .input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .submitButton,
+  .cancelButton {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .submitButton {
+    background-color: #28a745; /* Green */
+    color: white;
+  }
+  
+  .cancelButton {
+    background-color: #dc3545; /* Red */
+    color: white;
+    margin-left: 10px;
+  }
+  
+  .submitButton:hover,
+  .cancelButton:hover {
+    opacity: 0.8;
+  }
+  

@@ -1,0 +1,203 @@
+/* General styles */
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    background: #f7f9fc; /* Light background for a clean look */
+    min-height: 100vh; /* Ensure it covers the full viewport height */
+    font-family: 'Arial', sans-serif; /* Modern, clean font */
+}
+
+/* Content styles */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    background: #ecf0f1;
+    animation: slideIn 1s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchStud {
+    width: 410px;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    font-size: 15px;
+}
+
+.searchfilter {
+    display: flex;
+    gap: 10px;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically (optional) */
+}
+
+.student-content {
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 1100px; /* Set a max-width */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto; /* Center the container */
+}
+
+.student-content h2 {
+    margin-bottom: 20px;
+    color: #8A252C; /* Dark red text color */
+    font-family: 'Arial', sans-serif; /* Modern font */
+    font-size: 28px;
+    text-shadow: 1px 1px 3px #808080;  /* Slight shadow for all text */
+}
+
+.student-content button {
+    background-color: #FFD700; /* Gold background for buttons */
+    color: #8A252C; /* Dark red text for buttons */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background 0.3s, transform 0.3s;
+    font-size: 16px; /* Larger text for better readability */
+}
+
+.student-content button:hover {
+    background-color: #FFC700; /* Lighter gold on hover */
+    transform: scale(1.1);
+}
+
+.student-content button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+.student-container {
+    max-height: 400px; /* Adjust height as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Modern table styles */
+.student-table {
+    width: 100%;
+    border-collapse: collapse; /* Ensures borders are not doubled */
+    table-layout: fixed; /* Ensures consistent cell width */
+    border: 2px solid #8A252C;  
+}
+
+.student-table thead {
+    position: sticky; /* Sticky header */
+    top: 0; /* Fixed to the top */
+    z-index: 1; /* Ensure header stays on top of scrolling body */
+}
+
+.student-table th, .student-table td {
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.student-table th {
+    background-color: #8A252C;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 3px 3px 5px #000;  /* Slight shadow for all text */
+    border: 0.5px solid #8A252C;  
+}
+
+.student-table td {
+    cursor: pointer;
+    border: 1px solid #ccc;  
+}
+
+.user-table td {
+    cursor: pointer;
+    border: 1px solid #ccc; /* Border for body cells */
+}
+
+.student-table tr:hover {
+    background: #f4f6f9;
+}
+
+.student-table tr {
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add shadow to create "floating" effect */
+    border-radius: 8px; /* Round corners to create card effect */
+    background: #fff; /* Ensure each row has a white background */
+}
+
+.student-table tr.selected-row {
+    color: #8A252C; /* Dark red text color for selected row */
+    font-weight: bold; /* Bold text for selected row */
+    background-color: #e0e0e0 !important; /* Light gray background for the selected row */
+}
+
+/* Report buttons */
+.report-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.report-buttons button {
+    background-color: #FFD700; /* Gold background for buttons */
+    color: #8B0000; /* Dark red text for buttons */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px; /* Larger text for better readability */
+}
+
+.report-buttons button:hover {
+    background-color: #FFC700; /* Lighter gold on hover */
+    transform: scale(1.1);
+}
+
+.nonestudent{
+    margin-top: 50px;
+    font-size: 30px;
+    color: #888;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+    from { transform: translateX(-20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeInRight {
+    from { transform: translateX(20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}

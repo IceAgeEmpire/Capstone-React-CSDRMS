@@ -1,0 +1,27 @@
+.wrapper {
+    display: flex;
+    height: 100vh; /* Full height of the viewport */
+  }
+  
+.sidenav {
+    width: 20%;
+    background-color: #9F212C;
+    padding: 20px;
+    color: #fff;
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack navigation links vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+}
+  
+.sidenav a {
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+  
+.content {
+    flex: 1; /* Take remaining space */
+    padding: 20px;
+    background-color: #fff; /* White background */
+}
+   
